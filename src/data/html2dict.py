@@ -1,10 +1,12 @@
-import yaml
-from bs4 import BeautifulSoup
-from pathlib import Path
-import re
-import json
 from tqdm import tqdm
 from multiprocessing import Pool
+from bs4 import BeautifulSoup
+from pathlib import Path
+
+import re
+import json
+import yaml
+import argparse
 
 # How to properly combine law data with this data
 
@@ -29,11 +31,15 @@ def clean_text(para):
     3. Removing Punctuation
     3. Makes everthing in lower case
     """
+    para = para.lower()
     para = para.replace("\t",' ')
-    para = para.replace('\n',' ')# Replacing tabs and next line with spaces
+    para = para.replace('\n',' ')
+    para = para.replace('\f',' ')
+    para = re.sub(r'\\u\w{4}',' ',para)
+    para = re.sub(pattern=r'[^\x00-\x7F]+', repl=' ', string=para)
+    # Replacing tabs and next line with spaces
     # para = re.sub('[^\w\s]','',para)# Replacing puncation with space
     para = re.sub(' +',' ',para)
-    para = para.lower()
     return para
 
 def to_text(doc):
@@ -48,7 +54,7 @@ def get_doc_name_from_a_tag(lk):
     # print(lk.text)
     return lk.text
 
-def html2dict(x):
+def html2dict(x,save=True):
     path,name,jids = x
     soup_jud = BeautifulSoup(open(path,'r'),features="html.parser")
     title = to_text(soup_jud.find('div',{"class": "doc_title"}))
@@ -98,9 +104,23 @@ def html2dict(x):
             "citation_sc":judgment_citations,
             "citation_others":other_citations}
     path = f'../data/processed/processed_judgements/{name}.json'
-    dict2json(judg,path)
+    
+    if save:
+        dict2json(judg,path)
+    else:
+        print(judg)
+        print([len(p.split()) for p in judg['paragraphs']])
 
 if __name__=='__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug',help='Get in to debug mode',action='store_true')
+    parser.add_argument('--idx',help='index of file that will be cleaned',type=int)
+    args = parser.parse_args()
+    tqdm_disable = True
+    if args.debug:
+        tqdm_disable = False
+    
     gpath = get_gpath_dict()
     jids = set()
     names = []
@@ -108,17 +128,22 @@ if __name__=='__main__':
     n_cores = 10
     print("Number of cpus: ",n_cores)
     print("Preparing Inputs to Map")
-    for paths in tqdm(gpath['path_html_judg'].iterdir(),desc="Prep"):
+    for paths in tqdm(gpath['path_html_judg'].iterdir(),desc="Input Prep:",disable=tqdm_disable):
         name = paths.name.split('.')[0]
         jids.add(name)
         names.append(name)
         jpaths.append(paths)
     inputs = []
-    for x,y in tqdm(zip(jpaths,names),desc='Combine'):
-        inputs.append((x,y,jids))
+    for path,name in tqdm(zip(jpaths,names),desc='single imput for map',disable=tqdm_disable):
+        inputs.append((path,name,jids))
     print("Input Prep Completed")
-    print("Parallel processing started")
-    with Pool(n_cores) as p:
-        print(p.map(html2dict,inputs))
-
     
+    if args.debug:
+        print("In debug Mode working of file : ",jpaths[args.idx],names[args.idx])
+        html2dict((jpaths[args.idx],names[args.idx],jids),save=False)
+    else:
+        print("Parallel processing started")
+        with Pool(n_cores) as p:
+            p.map(html2dict,inputs)
+
+        print("#"*10 +" Completed "+ "#"*10)
