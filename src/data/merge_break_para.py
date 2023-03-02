@@ -11,11 +11,11 @@ import json
 This is still not perfect because some warnings are ther i.e length is exeding the maximum limit but very few
 """
 
-def dict2json(judg,path):
+def dict2json(judg,path,num):
     file = open(path,'w')
     json.dump(judg,file)
     file.close()
-    # print(f"Done: {path}")
+    print(f"Done {num} : {path}")
 
 
 def get_gpath_dict():
@@ -52,7 +52,7 @@ def break_para(para,nlp,limit):
             temp_para += sent.text + ' '
 
             count += len(sent.text.split(' '))
-            if count >= limit//2:
+            if count >= limit:
                 new_paras.append(temp_para.strip())
                 # print(f"{len(new_paras)} --->##{len(new_paras[-1].split(' '))}##-- {new_paras[-1]}\n\n" )
                 count = 0
@@ -63,7 +63,20 @@ def break_para(para,nlp,limit):
             count = 0
             temp_para = ''
             # print(f"{len(new_paras)} --->##{len(new_paras[-1].split(' '))}##-- {new_paras[-1]}\n\n" )
-        return new_paras
+        # if some paragraph are still greate then limit the we will split them 
+        final_paras = []
+        for para in new_paras:
+            if len(para.split()) > limit:
+                out = ''
+                for idx,word in enumerate(para.split()):
+                    out += word + ' '
+                    if (idx+1)%limit == 0:
+                        final_paras.append(out.strip())
+                        out = ''
+            else:
+                final_paras.append(para)
+
+        return final_paras
             # sents.append(sent)
         
     return [para]
@@ -78,11 +91,7 @@ def merge_paras(para_list,limit):
     new_paras = []
 
     while(pointer_one<len(lengths)):
-        if lengths[pointer_one] > 480:
-            # print(f"WARNING : length of the paragraph execeed the max limit {lengths[pointer_one]}")
-            new_paras.append(para_list[pointer_one])
-            pointer_one+=1
-        elif lengths[pointer_one] < limit:
+        if lengths[pointer_one] < limit:
             pointer_two =pointer_one
             total = lengths[pointer_two]
             temp_para = ''
@@ -109,35 +118,45 @@ def show_paras(para_list):
     for idx,para in enumerate(para_list):
         print(f"{idx+1} --->##{len(para.split(' '))}##-- {para}\n\n")
 
-def check_paras(para_list):
+def check_paras(para_list,limit,num):
 
     for idx,para in enumerate(para_list):
         length = len(para.split(' '))
-        if length > 480:
-            print(f"WARNING: LENGTH EXCESSED 480 {length}")
+        if length > limit:
+            print(f"WARNING: LENGTH EXCESSED {limit} {length}")
 
 
 def paralength_fixing(x):
     """
     Need to include the paragraph lenghts
     """
-    path,nlp,limit = x
+    path,nlp,limit,num = x
 
     file = open(path,'r')
     judg = json.load(file)
     file.close()
     actual_paras = judg.pop('headnote')
     actual_paras.extend(judg['paragraphs'])
+    out = dict()
     merged_para = merge_paras(para_list=actual_paras, limit=limit)
     new_paras = []
     for para in merged_para:
         new_paras.extend(break_para(para=para,nlp=nlp,limit=limit))
     # merged_para = merge_paras(para_list=new_paras, limit=limit)
-    judg['paragraphs'] = new_paras
+    out['paragraphs'] = new_paras
     # show_paras(para_list=judg['paragraphs'])
-    check_paras(para_list=judg['paragraphs'],name=)
-    dict2json(judg=judg, path=f'../data/processed/bert_ready/{path.name}')
+    check_paras(para_list=out['paragraphs'],limit=limit,num=num)
+    dict2json(judg=out, path=f'../data/processed/bert_ready/{path.name}',num=num)
 
+
+def combine():
+    final = dict()
+    for path in tqdm(Path('../data/processed/bert_ready/').iterdir(),desc='Combining Different outputs'):
+        file = open(path)
+        out = json.load(file) 
+        final[path.name.split('.')[0]] = out['paragraphs']
+        file.close()
+    dict2json(judg=final, path='../data/processed/judg2para.json', num="ALL DONE")
 
 if __name__=="__main__":
 
@@ -148,17 +167,17 @@ if __name__=="__main__":
     gpath = get_gpath_dict()
     paths = get_all_paths(gpath['path_clean'])
     nlp = spacy.load("en_core_web_sm")
-    limit = 460
+    limit = 400
 
     inputs = []
-    for path in paths:
-        inputs.append([path,nlp,limit])
+    for idx,path in enumerate(paths):
+        inputs.append([path,nlp,limit,idx])
 
     if args.debug:
         print("Started")
         paralength_fixing(x=inputs[args.idx])
     else:
-        n_cores = 10
+        n_cores = 30
         print("Number of cpus: ",n_cores)
         print("Preparing Inputs to Map")
         
@@ -167,4 +186,5 @@ if __name__=="__main__":
         with Pool(n_cores) as p:
             p.map(paralength_fixing,inputs)
 
+        combine()
         print("#"*10 +" Completed "+ "#"*10)
