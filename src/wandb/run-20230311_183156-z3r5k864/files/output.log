@@ -1,0 +1,180 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1323262.20it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2047010.36it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2622396.23it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1271336.53it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2040076.66it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3438741.85it/s]
+Train size: 104692 , Valid size: 1530
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traning Epoch 1:  37%|█████████████████████████████████████████▌                                                                       | 301/818 [01:53<03:11,  2.70it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traning Epoch 1:  74%|███████████████████████████████████████████████████████████████████████████████████▍                             | 604/818 [03:48<01:19,  2.68it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Traning Epoch 1: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 818/818 [05:10<00:00,  2.64it/s]
+Avergae Train Loss 0.6500527998637453
+F1 train : 0.6187689900398254
+Precision train : 0.6234244704246521
+Recall train : 0.6141825318336487
+Validation Epoch 1:   0%|                                                                                                                         | 0/12 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 184, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 127, in train
+    y_pred = model(x1,x2,masks)
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py", line 58, in forward
+    cls_x1 = torch.cat((cls_out,x1),dim=1)
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu! (when checking argument for argument tensors in method wrapper_cat)

@@ -1,0 +1,36 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1233517.27it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1885301.39it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2554696.31it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1336898.51it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1998972.36it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3505585.23it/s]
+Train size: 97636 , Valid size: 1478
+Traning Epoch 1:   0%|                                                                                                                           | 0/763 [00:00<?, ?it/s]
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py(61)forward()
+     60         ipdb.set_trace()
+---> 61         x = torch.cat((cls_x1,sep_x2),dim=1)
+Traning Epoch 1:   0%|                                                                                                                           | 0/763 [00:17<?, ?it/s]
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 184, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 90, in train
+    y_pred = model(x1,x2,masks)
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py", line 61, in forward
+    x = torch.cat((cls_x1,sep_x2),dim=1)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py", line 61, in forward
+    x = torch.cat((cls_x1,sep_x2),dim=1)
+  File "/home2/sisodiya.bhoomendra/localpython/python3.9.16/lib/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home2/sisodiya.bhoomendra/localpython/python3.9.16/lib/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+If you suspect this is an IPython 8.7.0 bug, please report it at:
+    https://github.com/ipython/ipython/issues
+or send an email to the mailing list at ipython-dev@python.org
+You can print a more detailed traceback right now with "%tb", or use "%debug"
+to interactively debug it.
+Extra-detailed tracebacks for bug-reporting purposes can be enabled via:
+    %config Application.verbose_crash=True

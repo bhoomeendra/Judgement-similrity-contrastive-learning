@@ -17,7 +17,7 @@ class Transformer_Model(nn.Module):
         self.projection = nn.Linear(in_features=self.config['in_features'], 
             out_features=self.config['out_features'],bias=False)
         
-        self.encoder = nn.TransformerEncoderLayer(d_model=self.config['out_features'],
+        self.encoder = nn.TransformerEncoderLayer(d_model=self.config['in_features'],
             nhead=self.config['nhead'],activation=self.get_activation(),
             batch_first=True)
         
@@ -31,7 +31,7 @@ class Transformer_Model(nn.Module):
 
         self.emb = nn.Embedding(num_embeddings=2, embedding_dim=self.config['in_features'])
         self.cls = torch.tensor(0).to("cuda")
-        self.sep = torch.tensor(1).to("cuda")
+        self.sep = torch.tensor(1).to("cuda") #This is not how this should be done 
 
     def get_activation(self):
         if self.config['activation'] == 'selu':
@@ -43,29 +43,29 @@ class Transformer_Model(nn.Module):
         else:
             return None
 
-    def forward(self,x1,x2):# The input is in a batch
+    def forward(self,x1,x2,padd_mask):# The input is in a batch
         # ["CLS", X1,"SEP",X2]
         # Have to padd such that x1 and x2 have same number of paragraph 
-        # X1 [N , P1 , 768] X2 [N , P2 , 768] P1 and P2 will be same for all the paragraphs in that batch and that side
+        # X1 [N , 80 , 768] X2 [N , 80 , 768] P1 and P2 will be same for all the paragraphs in that batch and that side
         # Order is also fixed the query case will be the first and the precedent side will be the later
-
+        # ipdb.set_trace()
         cls_emb = self.emb(self.cls)
         sep_emb = self.emb(self.sep)
-
-        cls_out = cls_emb.unsqueeze(0).unsqueeze(0).repeat((self.config['batch_size'],1,1))
-        sep_emb = sep_emb.unsqueeze(0).unsqueeze(0).repeat((self.config['batch_size'],1,1))
-
+        # ipdb.set_trace()
+        cls_out = cls_emb.unsqueeze(0).unsqueeze(0).repeat((x1.shape[0],1,1))
+        sep_emb = sep_emb.unsqueeze(0).unsqueeze(0).repeat((x2.shape[0],1,1))
+        # ipdb.set_trace()
         cls_x1 = torch.cat((cls_out,x1),dim=1)
         sep_x2 = torch.cat((sep_emb,x2),dim=1)
-
+        # ipdb.set_trace()
         x = torch.cat((cls_x1,sep_x2),dim=1)
-
+        # ipdb.set_trace()
         x = self.projection(x)
-        x = self.encoder_stack(x)
+        x = self.encoder_stack(x,src_key_padding_mask=padd_mask)
         cls_emb = x[:,0,:]
         x = self.classifier(cls_emb)
         x = self.softmax(x)
-        print(x)        
+        # print(x)        
         return x
 
 if __name__=='__main__':

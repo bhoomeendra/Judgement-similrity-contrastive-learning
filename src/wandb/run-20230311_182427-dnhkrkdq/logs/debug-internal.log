@@ -1,0 +1,242 @@
+2023-03-11 18:24:27,384 INFO    StreamThr :16149 [internal.py:wandb_internal():87] W&B internal server running at pid: 16149, started at: 2023-03-11 18:24:27.383557
+2023-03-11 18:24:27,386 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status
+2023-03-11 18:24:27,388 INFO    WriterThread:16149 [datastore.py:open_for_write():85] open: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/run-dnhkrkdq.wandb
+2023-03-11 18:24:27,392 DEBUG   SenderThread:16149 [sender.py:send():336] send: header
+2023-03-11 18:24:27,403 DEBUG   SenderThread:16149 [sender.py:send():336] send: run
+2023-03-11 18:24:28,152 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: check_version
+2023-03-11 18:24:28,176 INFO    SenderThread:16149 [dir_watcher.py:__init__():216] watching files in: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files
+2023-03-11 18:24:28,176 INFO    SenderThread:16149 [sender.py:_start_run_threads():1067] run started: dnhkrkdq with start time 1678539267.382614
+2023-03-11 18:24:28,176 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: summary_record
+2023-03-11 18:24:28,178 INFO    SenderThread:16149 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-11 18:24:28,178 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: check_version
+2023-03-11 18:24:28,318 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: run_start
+2023-03-11 18:24:29,181 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_created():275] file/dir created: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-summary.json
+2023-03-11 18:24:29,233 DEBUG   HandlerThread:16149 [system_info.py:__init__():31] System info init
+2023-03-11 18:24:29,233 DEBUG   HandlerThread:16149 [system_info.py:__init__():46] System info init done
+2023-03-11 18:24:29,233 INFO    HandlerThread:16149 [system_monitor.py:start():151] Starting system monitor
+2023-03-11 18:24:29,234 INFO    SystemMonitor:16149 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-11 18:24:29,234 INFO    HandlerThread:16149 [system_monitor.py:probe():172] Collecting system info
+2023-03-11 18:24:29,234 INFO    SystemMonitor:16149 [interfaces.py:start():168] Started cpu
+2023-03-11 18:24:29,235 INFO    SystemMonitor:16149 [interfaces.py:start():168] Started disk
+2023-03-11 18:24:29,236 INFO    SystemMonitor:16149 [interfaces.py:start():168] Started gpu
+2023-03-11 18:24:29,236 INFO    SystemMonitor:16149 [interfaces.py:start():168] Started memory
+2023-03-11 18:24:29,237 INFO    SystemMonitor:16149 [interfaces.py:start():168] Started network
+2023-03-11 18:24:29,286 DEBUG   HandlerThread:16149 [system_info.py:probe():195] Probing system
+2023-03-11 18:24:29,292 DEBUG   HandlerThread:16149 [system_info.py:_probe_git():180] Probing git
+2023-03-11 18:24:29,314 DEBUG   HandlerThread:16149 [system_info.py:_probe_git():188] Probing git done
+2023-03-11 18:24:29,314 DEBUG   HandlerThread:16149 [system_info.py:probe():241] Probing system done
+2023-03-11 18:24:29,315 DEBUG   HandlerThread:16149 [system_monitor.py:probe():181] {'os': 'Linux-4.15.0-202-generic-x86_64-with-glibc2.27', 'python': '3.9.16', 'heartbeatAt': '2023-03-11T12:54:29.286819', 'startedAt': '2023-03-11T12:54:27.281843', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py', 'codePath': 'src/train/trainer.py', 'git': {'remote': 'git@github.com:bhoomeendra/Judgement-similrity-contrastive-learning.git', 'commit': '1c0a672638f6d2b9cb792afe5e4136a6d5053ba2'}, 'email': 'bhoomeendra.pro@gmail.com', 'root': '/home2/sisodiya.bhoomendra/github/contrastive_learning', 'host': 'gnode056', 'username': 'sisodiya.bhoomendra', 'executable': '/home2/sisodiya.bhoomendra/venvs/python3.9_global/bin/python', 'cpu_count': 20, 'cpu_count_logical': 40, 'cpu_freq': {'current': 1594.9369499999998, 'min': 1200.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 3293.861, 'min': 1200.0, 'max': 3400.0}, {'current': 2406.797, 'min': 1200.0, 'max': 3400.0}, {'current': 2279.369, 'min': 1200.0, 'max': 3400.0}, {'current': 1499.967, 'min': 1200.0, 'max': 3400.0}, {'current': 2074.266, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.893, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.386, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.048, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.05, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.098, 'min': 1200.0, 'max': 3400.0}, {'current': 2005.358, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.509, 'min': 1200.0, 'max': 3400.0}, {'current': 1303.727, 'min': 1200.0, 'max': 3400.0}, {'current': 1303.478, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.434, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.167, 'min': 1200.0, 'max': 3400.0}, {'current': 2400.011, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.164, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.696, 'min': 1200.0, 'max': 3400.0}, {'current': 2250.768, 'min': 1200.0, 'max': 3400.0}, {'current': 3260.055, 'min': 1200.0, 'max': 3400.0}, {'current': 2400.237, 'min': 1200.0, 'max': 3400.0}, {'current': 2301.381, 'min': 1200.0, 'max': 3400.0}, {'current': 1500.006, 'min': 1200.0, 'max': 3400.0}, {'current': 2077.024, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.267, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.321, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.049, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.177, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.828, 'min': 1200.0, 'max': 3400.0}, {'current': 1860.955, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.201, 'min': 1200.0, 'max': 3400.0}, {'current': 1300.586, 'min': 1200.0, 'max': 3400.0}, {'current': 1300.763, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.418, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.686, 'min': 1200.0, 'max': 3400.0}, {'current': 2397.328, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.108, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.616, 'min': 1200.0, 'max': 3400.0}, {'current': 1982.853, 'min': 1200.0, 'max': 3400.0}], 'disk': {'total': 219.00129318237305, 'used': 71.77310562133789}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.78214645385742}}
+2023-03-11 18:24:29,315 INFO    HandlerThread:16149 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-11 18:24:29,315 INFO    HandlerThread:16149 [system_monitor.py:probe():185] Publishing system info
+2023-03-11 18:24:29,315 DEBUG   HandlerThread:16149 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-11 18:24:29,317 DEBUG   HandlerThread:16149 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-11 18:24:29,319 INFO    HandlerThread:16149 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-11 18:24:29,356 DEBUG   SenderThread:16149 [sender.py:send():336] send: files
+2023-03-11 18:24:29,357 INFO    SenderThread:16149 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-11 18:24:29,372 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-11 18:24:29,373 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: stop_status
+2023-03-11 18:24:29,706 DEBUG   SenderThread:16149 [sender.py:send():336] send: telemetry
+2023-03-11 18:24:30,182 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_created():275] file/dir created: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-metadata.json
+2023-03-11 18:24:30,183 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_created():275] file/dir created: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:30,183 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_created():275] file/dir created: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/requirements.txt
+2023-03-11 18:24:30,347 INFO    wandb-upload_0:16149 [upload_job.py:push():138] Uploaded file /tmp/tmpct8h6slrwandb/emrld5gl-wandb-metadata.json
+2023-03-11 18:24:32,185 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:32,418 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:34,187 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:36,189 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:37,190 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:37,550 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:38,192 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:39,193 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:24:42,551 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:44,369 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:24:44,370 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:24:47,553 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:49,371 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:24:52,554 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:54,372 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:24:57,560 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:24:58,208 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/config.yaml
+2023-03-11 18:24:59,373 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:02,942 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:04,374 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:07,944 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:09,375 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:12,945 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:14,376 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:17,946 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:19,377 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:22,947 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:24,378 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:27,948 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:29,238 DEBUG   SystemMonitor:16149 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-11 18:25:29,241 DEBUG   SenderThread:16149 [sender.py:send():336] send: stats
+2023-03-11 18:25:29,379 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:33,243 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:34,380 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:38,244 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:39,381 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:43,245 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:44,382 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:48,246 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:49,383 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:53,247 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:54,384 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:25:58,248 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:25:59,243 DEBUG   SenderThread:16149 [sender.py:send():336] send: stats
+2023-03-11 18:25:59,385 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:04,245 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:04,386 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:09,246 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:09,387 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:14,247 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:14,388 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:19,248 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:19,389 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:24,249 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:24,390 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:29,245 DEBUG   SenderThread:16149 [sender.py:send():336] send: stats
+2023-03-11 18:26:29,391 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:29,925 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:31,282 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:34,392 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:35,803 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:37,287 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:39,393 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:40,804 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:44,394 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:46,455 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:47,296 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:49,395 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:26:51,456 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:53,300 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:53,733 DEBUG   SenderThread:16149 [sender.py:send():336] send: exit
+2023-03-11 18:26:53,733 INFO    SenderThread:16149 [sender.py:send_exit():559] handling exit code: 0
+2023-03-11 18:26:53,733 INFO    SenderThread:16149 [sender.py:send_exit():561] handling runtime: 145
+2023-03-11 18:26:53,735 INFO    SenderThread:16149 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-11 18:26:53,735 INFO    SenderThread:16149 [sender.py:send_exit():567] send defer
+2023-03-11 18:26:53,735 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,735 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-11 18:26:53,736 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,736 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-11 18:26:53,736 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 1
+2023-03-11 18:26:53,736 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,736 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-11 18:26:53,736 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,736 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-11 18:26:53,736 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 2
+2023-03-11 18:26:53,736 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,737 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-11 18:26:53,737 INFO    HandlerThread:16149 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-11 18:26:53,738 INFO    HandlerThread:16149 [interfaces.py:finish():175] Joined cpu
+2023-03-11 18:26:53,738 DEBUG   SystemMonitor:16149 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-11 18:26:53,738 DEBUG   SystemMonitor:16149 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-11 18:26:53,739 INFO    HandlerThread:16149 [interfaces.py:finish():175] Joined disk
+2023-03-11 18:26:53,794 INFO    HandlerThread:16149 [interfaces.py:finish():175] Joined gpu
+2023-03-11 18:26:53,794 INFO    HandlerThread:16149 [interfaces.py:finish():175] Joined memory
+2023-03-11 18:26:53,795 INFO    HandlerThread:16149 [interfaces.py:finish():175] Joined network
+2023-03-11 18:26:53,795 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,795 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-11 18:26:53,795 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 3
+2023-03-11 18:26:53,795 DEBUG   SenderThread:16149 [sender.py:send():336] send: stats
+2023-03-11 18:26:53,795 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,796 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-11 18:26:53,797 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,797 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-11 18:26:53,797 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 4
+2023-03-11 18:26:53,797 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,797 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-11 18:26:53,798 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,798 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-11 18:26:53,798 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 5
+2023-03-11 18:26:53,798 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,798 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-11 18:26:53,799 DEBUG   SenderThread:16149 [sender.py:send():336] send: summary
+2023-03-11 18:26:53,800 INFO    SenderThread:16149 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-11 18:26:53,801 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,801 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-11 18:26:53,801 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 6
+2023-03-11 18:26:53,802 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,802 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-11 18:26:53,802 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,802 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-11 18:26:53,802 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 7
+2023-03-11 18:26:53,803 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:26:53,803 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:53,803 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-11 18:26:53,803 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:53,804 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-11 18:26:54,301 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-summary.json
+2023-03-11 18:26:54,733 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-11 18:26:56,303 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:56,498 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 8
+2023-03-11 18:26:56,499 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: poll_exit
+2023-03-11 18:26:56,499 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:56,499 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-11 18:26:56,500 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:56,500 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-11 18:26:56,573 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 9
+2023-03-11 18:26:56,573 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:56,573 DEBUG   SenderThread:16149 [sender.py:send():336] send: artifact
+2023-03-11 18:26:56,573 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-11 18:26:57,304 INFO    Thread-13 :16149 [dir_watcher.py:_on_file_modified():292] file/dir modified: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:26:58,322 INFO    SenderThread:16149 [sender.py:send_artifact():1417] sent artifact job-git_github.com_bhoomeendra_Judgement-similrity-contrastive-learning.git_src_train_trainer.py - {'id': 'QXJ0aWZhY3Q6Mzk0MjcyODEy', 'digest': '135c73ec053e195fcb6446b71aea0585', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-git_github.com_bhoomeendra_Judgement-similrity-contrastive-learning.git_src_train_trainer.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-git_github.com_bhoomeendra_Judgement-similrity-contrastive-learning.git_src_train_trainer.py', 'alias': 'v3'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU1ODI2MDM1', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Mzk0MjcyODEy', 'versionIndex': 3}}, 'version': 'v3'}
+2023-03-11 18:26:58,322 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:58,322 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-11 18:26:58,323 INFO    SenderThread:16149 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-11 18:26:59,306 INFO    SenderThread:16149 [dir_watcher.py:finish():392] scan: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files
+2023-03-11 18:26:59,306 INFO    SenderThread:16149 [dir_watcher.py:finish():406] scan save: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/requirements.txt requirements.txt
+2023-03-11 18:26:59,306 INFO    SenderThread:16149 [dir_watcher.py:finish():406] scan save: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-summary.json wandb-summary.json
+2023-03-11 18:26:59,313 INFO    SenderThread:16149 [dir_watcher.py:finish():406] scan save: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/config.yaml config.yaml
+2023-03-11 18:26:59,321 INFO    SenderThread:16149 [dir_watcher.py:finish():406] scan save: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log output.log
+2023-03-11 18:26:59,328 INFO    SenderThread:16149 [dir_watcher.py:finish():406] scan save: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-metadata.json wandb-metadata.json
+2023-03-11 18:26:59,328 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 10
+2023-03-11 18:26:59,330 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:26:59,335 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-11 18:26:59,337 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:26:59,338 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-11 18:26:59,338 INFO    SenderThread:16149 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-11 18:26:59,735 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-11 18:27:00,265 INFO    wandb-upload_0:16149 [upload_job.py:push():138] Uploaded file /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/requirements.txt
+2023-03-11 18:27:00,289 INFO    wandb-upload_2:16149 [upload_job.py:push():138] Uploaded file /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/config.yaml
+2023-03-11 18:27:00,323 INFO    wandb-upload_1:16149 [upload_job.py:push():138] Uploaded file /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/wandb-summary.json
+2023-03-11 18:27:00,325 INFO    wandb-upload_3:16149 [upload_job.py:push():138] Uploaded file /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/files/output.log
+2023-03-11 18:27:00,526 INFO    Thread-12 :16149 [sender.py:transition_state():587] send defer: 11
+2023-03-11 18:27:00,526 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:27:00,526 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-11 18:27:00,527 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:27:00,527 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-11 18:27:00,527 INFO    SenderThread:16149 [file_pusher.py:join():167] waiting for file pusher
+2023-03-11 18:27:00,527 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 12
+2023-03-11 18:27:00,527 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:27:00,528 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-11 18:27:00,528 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:27:00,528 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-11 18:27:01,505 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 13
+2023-03-11 18:27:01,505 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:27:01,505 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-11 18:27:01,505 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: status_report
+2023-03-11 18:27:01,506 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:27:01,506 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-11 18:27:01,506 INFO    SenderThread:16149 [sender.py:transition_state():587] send defer: 14
+2023-03-11 18:27:01,507 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: defer
+2023-03-11 18:27:01,508 DEBUG   SenderThread:16149 [sender.py:send():336] send: final
+2023-03-11 18:27:01,508 INFO    HandlerThread:16149 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-11 18:27:01,508 DEBUG   SenderThread:16149 [sender.py:send():336] send: footer
+2023-03-11 18:27:01,508 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: defer
+2023-03-11 18:27:01,509 INFO    SenderThread:16149 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-11 18:27:01,510 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-11 18:27:01,510 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: poll_exit
+2023-03-11 18:27:01,511 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: server_info
+2023-03-11 18:27:01,512 DEBUG   SenderThread:16149 [sender.py:send_request():363] send_request: server_info
+2023-03-11 18:27:01,517 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-11 18:27:01,517 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-11 18:27:01,845 INFO    MainThread:16149 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-11 18:27:01,846 INFO    MainThread:16149 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-11 18:27:01,846 INFO    MainThread:16149 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2023-03-11 18:27:01,846 DEBUG   HandlerThread:16149 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-11 18:27:01,847 INFO    HandlerThread:16149 [handler.py:finish():841] shutting down handler
+2023-03-11 18:27:02,512 INFO    WriterThread:16149 [datastore.py:close():299] close: /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230311_182427-dnhkrkdq/run-dnhkrkdq.wandb
+2023-03-11 18:27:02,845 INFO    SenderThread:16149 [sender.py:finish():1493] shutting down sender
+2023-03-11 18:27:02,845 INFO    SenderThread:16149 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-11 18:27:02,846 INFO    SenderThread:16149 [file_pusher.py:join():167] waiting for file pusher

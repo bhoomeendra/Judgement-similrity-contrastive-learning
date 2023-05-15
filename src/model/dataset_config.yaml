@@ -1,2 +1,5 @@
 ---
 embedding: 'InLegalBERT_emb_new.pkl'
+limit : 80
+train_split: 0.7
+val_split: 0.1

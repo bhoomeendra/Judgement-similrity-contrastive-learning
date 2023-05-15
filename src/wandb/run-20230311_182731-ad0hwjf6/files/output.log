@@ -1,0 +1,52 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1221913.96it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2014890.79it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2610825.80it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1278205.63it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1983560.85it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3427576.38it/s]
+Train size: 104918 , Valid size: 1288
+Traning Epoch 1:   0%|                                                                                                                           | 0/820 [00:00<?, ?it/s]
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py(90)train()
+     89             ipdb.set_trace()
+---> 90             y_pred = model(x1,x2,masks)
+     91             train_loss = loss(y_pred,labels)
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py(55)forward()
+     54         ipdb.set_trace()
+---> 55         cls_out = cls_emb.unsqueeze(0).unsqueeze(0).repeat((x1.shape[0],1,1))
+     56         sep_emb = sep_emb.unsqueeze(0).unsqueeze(0).repeat((x2.shape[0],1,1))
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py(58)forward()
+     57         ipdb.set_trace()
+---> 58         cls_x1 = torch.cat((cls_out,x1),dim=1)
+     59         sep_x2 = torch.cat((sep_emb,x2),dim=1)
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py(61)forward()
+     60         ipdb.set_trace()
+---> 61         x = torch.cat((cls_x1,sep_x2),dim=1)
+     62         ipdb.set_trace()
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/model.py(63)forward()
+     62         ipdb.set_trace()
+---> 63         x = self.projection(x)
+
+Traning Epoch 1:   0%|▏                                                                                                                | 1/820 [00:11<2:34:27, 11.32s/it]
+> /home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py(89)train()
+     88             labels = labels.to(device)
+---> 89             ipdb.set_trace()
+Traning Epoch 1:   0%|▏                                                                                                                | 1/820 [00:14<3:19:33, 14.62s/it]
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/IPython/core/debugger.py", line 145, in BdbQuit_excepthook
+    raise ValueError(
+ValueError: `BdbQuit_excepthook` is deprecated since version 5.1
+Original exception was:
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 184, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 89, in train
+    ipdb.set_trace()
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 89, in train
+    ipdb.set_trace()
+  File "/home2/sisodiya.bhoomendra/localpython/python3.9.16/lib/python3.9/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home2/sisodiya.bhoomendra/localpython/python3.9.16/lib/python3.9/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

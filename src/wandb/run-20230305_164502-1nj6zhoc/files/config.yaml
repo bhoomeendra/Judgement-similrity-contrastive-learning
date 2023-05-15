@@ -1,0 +1,46 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.13.10
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.9.16
+    start_time: 1678014902.582242
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.9.16
+      5: 0.13.10
+      8:
+      - 5
+dataset:
+  desc: null
+  value:
+    embedding: InLegalBERT_emb_new.pkl
+    limit: 80
+    train_split: 0.05
+    val_split: 0.05
+model:
+  desc: null
+  value:
+    activation: selu
+    batch_size: 128
+    in_features: 768
+    nhead: 3
+    num_encoder_layers: 4
+    out_features: 768
+train:
+  desc: null
+  value:
+    epochs: 3
+    lr: 1.0e-05

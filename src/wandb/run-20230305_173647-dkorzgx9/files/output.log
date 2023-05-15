@@ -1,0 +1,49 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1241662.95it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1486923.10it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2364705.44it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1195235.87it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1489358.47it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3543241.13it/s]
+Train size: 156344 , Valid size: 510
+Traning Epoch 1:   0%|                                                                                                                          | 0/1222 [00:00<?, ?it/s]
+Batch No. 1  the average train loss 1.388664722442627
+Batch No. 2  the average train loss 1.039750337600708
+
+Traning Epoch 1:   0%|▌                                                                                                                 | 6/1222 [00:02<07:42,  2.63it/s]
+Batch No. 4  the average train loss 0.8738865554332733
+Batch No. 5  the average train loss 0.8337404608726502
+Batch No. 6  the average train loss 0.8154280185699463
+Batch No. 7  the average train loss 0.8032964978899274
+
+Traning Epoch 1:   1%|█                                                                                                                | 12/1222 [00:04<07:02,  2.86it/s]
+Batch No. 9  the average train loss 0.7800209522247314
+Batch No. 10  the average train loss 0.7705611109733581
+Batch No. 11  the average train loss 0.7638150778683749
+Batch No. 12  the average train loss 0.7562943398952484
+Batch No. 13  the average train loss 0.7516525525313157
+
+Traning Epoch 1:   1%|█▋                                                                                                               | 18/1222 [00:06<06:56,  2.89it/s]
+Batch No. 15  the average train loss 0.7469998478889466
+Batch No. 16  the average train loss 0.7427732907235622
+Batch No. 17  the average train loss 0.739347377244164
+Batch No. 18  the average train loss 0.7346785200966729
+Batch No. 19  the average train loss 0.7322370315852919
+
+Traning Epoch 1:   2%|██▏                                                                                                              | 23/1222 [00:08<06:55,  2.89it/s]
+Batch No. 21  the average train loss 0.7282432431266421
+Batch No. 22  the average train loss 0.7265754342079163
+Batch No. 23  the average train loss 0.7255027812460194
+Batch No. 24  the average train loss 0.7224817474683126
+Batch No. 25  the average train loss 0.7216608405113221
+
+Traning Epoch 1:   2%|██▋                                                                                                              | 29/1222 [00:10<06:55,  2.87it/s]
+Batch No. 27  the average train loss 0.717984813231009
+Batch No. 28  the average train loss 0.717173844575882
+Traning Epoch 1:   2%|██▊                                                                                                              | 30/1222 [00:11<07:30,  2.64it/s]
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 178, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 89, in train
+    avg_train_loss += train_loss.item()
+KeyboardInterrupt

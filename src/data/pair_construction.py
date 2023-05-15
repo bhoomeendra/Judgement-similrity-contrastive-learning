@@ -35,6 +35,25 @@ def get_dist_2(source):
     neg = [ (source,x[1]) for x in out if x[0]!= source ]
     return pos,neg
 
+def get_dist_4(source):
+    out = list(nx.bfs_edges(G, source=source, depth_limit=4))
+    dist_n = {'dist_1':set(),
+              'dist_2':set(),
+              'dist_3':set(),
+              'dist_4':set()}
+    for x in out:
+        if x[0] == source:
+            dist_n['dist_1'].add(x[1])
+        elif x[0] in dist_n['dist_1']:
+            dist_n['dist_2'].add(x[1])
+        elif x[0] in dist1_n['dist_2']:
+            dist_n['dist_3'].add(x[1])
+        elif x[0] in dist1_n['dist_3']:
+                dist_n['dist_4'].add(x[1])
+    
+    return pos,neg
+
+
 def get_triplet(source):
     out = list(nx.bfs_edges(G, source=source, depth_limit=2))
     dist1 =  set([ x[0] for x in out if x[0]!=source ])

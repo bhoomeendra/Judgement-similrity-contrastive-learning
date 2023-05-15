@@ -1,0 +1,16 @@
+---
+dataset:
+  embedding: 'multi-qa-mpnet-base-dot-v1_emb.pkl'
+  limit: 80
+  train_split: 0.6
+  val_split: 0.15
+model:
+  nhead : 3
+  in_features: 768
+  out_features : 768
+  activation : 'selu'
+  num_encoder_layers: 4
+  batch_size : 128
+train:
+  lr: 0.00001
+  epochs: 15

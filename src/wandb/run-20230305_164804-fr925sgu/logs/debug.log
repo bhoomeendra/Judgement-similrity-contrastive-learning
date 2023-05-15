@@ -1,0 +1,25 @@
+2023-03-05 16:48:04,130 INFO    MainThread:23979 [wandb_setup.py:_flush():68] Configure stats pid to 23979
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_setup.py:_flush():68] Loading settings from /home2/sisodiya.bhoomendra/.config/wandb/settings
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_setup.py:_flush():68] Loading settings from /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/settings
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'src/train/trainer.py', 'program': '/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py'}
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_init.py:_log_setup():492] Logging user logs to /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230305_164804-fr925sgu/logs/debug.log
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_init.py:_log_setup():493] Logging internal logs to /home2/sisodiya.bhoomendra/github/contrastive_learning/src/wandb/run-20230305_164804-fr925sgu/logs/debug-internal.log
+2023-03-05 16:48:04,131 INFO    MainThread:23979 [wandb_init.py:init():532] calling init triggers
+2023-03-05 16:48:04,132 INFO    MainThread:23979 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {'dataset': {'embedding': 'InLegalBERT_emb_new.pkl', 'limit': 80, 'train_split': 0.7, 'val_split': 0.1}, 'model': {'nhead': 3, 'in_features': 768, 'out_features': 768, 'activation': 'selu', 'num_encoder_layers': 4, 'batch_size': 128}, 'train': {'lr': 1e-05, 'epochs': 3}}
+2023-03-05 16:48:04,132 INFO    MainThread:23979 [wandb_init.py:init():588] starting backend
+2023-03-05 16:48:04,132 INFO    MainThread:23979 [wandb_init.py:init():592] setting up manager
+2023-03-05 16:48:04,134 INFO    MainThread:23979 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-05 16:48:04,138 INFO    MainThread:23979 [wandb_init.py:init():599] backend started and connected
+2023-03-05 16:48:04,141 INFO    MainThread:23979 [wandb_init.py:init():687] updated telemetry
+2023-03-05 16:48:04,169 INFO    MainThread:23979 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-03-05 16:48:04,911 INFO    MainThread:23979 [wandb_run.py:_on_init():2134] communicating current version
+2023-03-05 16:48:05,012 INFO    MainThread:23979 [wandb_run.py:_on_init():2143] got version response 
+2023-03-05 16:48:05,012 INFO    MainThread:23979 [wandb_init.py:init():775] starting run threads in backend
+2023-03-05 16:48:06,067 INFO    MainThread:23979 [wandb_run.py:_console_start():2114] atexit reg
+2023-03-05 16:48:06,067 INFO    MainThread:23979 [wandb_run.py:_redirect():1969] redirect: SettingsConsole.WRAP_RAW
+2023-03-05 16:48:06,068 INFO    MainThread:23979 [wandb_run.py:_redirect():2034] Wrapping output streams.
+2023-03-05 16:48:06,068 INFO    MainThread:23979 [wandb_run.py:_redirect():2059] Redirects installed.
+2023-03-05 16:48:06,069 INFO    MainThread:23979 [wandb_init.py:init():817] run started, returning control to user process
+2023-03-05 16:48:54,032 WARNING MsgRouterThr:23979 [router.py:message_loop():77] message_loop has been closed

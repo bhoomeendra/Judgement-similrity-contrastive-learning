@@ -1,0 +1,16 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1255777.36it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1466383.58it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2341318.38it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1194614.36it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1499985.68it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3481281.55it/s]
+Train size: 148214 , Valid size: 578
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 179, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 75, in train
+    schedular = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer=optim,T_0=3,T_mult=0.3) #torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer=optim,patience=1)
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/optim/lr_scheduler.py", line 1349, in __init__
+    raise ValueError("Expected integer T_mult >= 1, but got {}".format(T_mult))
+ValueError: Expected integer T_mult >= 1, but got 0.3

@@ -1,0 +1,245 @@
+{
+    "os": "Linux-4.15.0-202-generic-x86_64-with-glibc2.27",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-03-11T12:47:45.225897",
+    "startedAt": "2023-03-11T12:47:43.505331",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py",
+    "codePath": "src/train/trainer.py",
+    "git": {
+        "remote": "git@github.com:bhoomeendra/Judgement-similrity-contrastive-learning.git",
+        "commit": "1c0a672638f6d2b9cb792afe5e4136a6d5053ba2"
+    },
+    "email": "bhoomeendra.pro@gmail.com",
+    "root": "/home2/sisodiya.bhoomendra/github/contrastive_learning",
+    "host": "gnode056",
+    "username": "sisodiya.bhoomendra",
+    "executable": "/home2/sisodiya.bhoomendra/venvs/python3.9_global/bin/python",
+    "cpu_count": 20,
+    "cpu_count_logical": 40,
+    "cpu_freq": {
+        "current": 1553.72165,
+        "min": 1200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1420.152,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3186.261,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.254,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2997.249,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1693.436,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1285.235,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.374,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.905,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.163,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1292.046,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.51,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1703.486,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.822,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1503.352,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.688,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2405.37,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2398.859,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.073,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.377,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.926,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1574.108,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3070.835,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.589,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2125.449,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1904.49,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1296.112,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.317,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.321,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.976,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1300.749,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.267,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1701.12,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.469,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1500.753,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.159,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2090.675,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2400.011,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.212,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.002,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.948,
+            "min": 1200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "total": 219.00129318237305,
+        "used": 71.77310562133789
+    },
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 125.78214645385742
+    }
+}

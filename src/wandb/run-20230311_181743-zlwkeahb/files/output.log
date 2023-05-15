@@ -1,0 +1,29 @@
+
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1204322.33it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1768751.76it/s]
+train Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 2632242.65it/s]
+Loading Triplets: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1276774.76it/s]
+ids extractions: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 1906286.91it/s]
+valid Split: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 652356/652356 [00:00<00:00, 3454191.88it/s]
+Train size: 95208 , Valid size: 1244
+Traning Epoch 1:   0%|                                                                                                                           | 0/744 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 178, in <module>
+    train(config)
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/train/trainer.py", line 83, in train
+    for batch,(x1,x2,labels,masks) in tqdm(enumerate(train_dataloader),desc=f"Traning Epoch {epoch+1}",total=len(train_dataloader)):
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/tqdm/std.py", line 1195, in __iter__
+    for obj in iterable:
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home2/sisodiya.bhoomendra/venvs/python3.9_global/lib/python3.9/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/dataset.py", line 63, in __getitem__
+    return self.get_tensor(self.train_triples[idx][0] , self.train_triples[idx][1] , [0,1])
+  File "/home2/sisodiya.bhoomendra/github/contrastive_learning/src/model/dataset.py", line 56, in get_tensor
+    return self.embeddings[jid1],self.embeddings[jid2],torch.tensor(label,dtype=torch.float).to(self.embeddings[jid1].device)
+AttributeError: 'numpy.ndarray' object has no attribute 'device'
